@@ -30,9 +30,8 @@ Version: 0.1
       ```python
       from ePyHTML import ePyHTML
       ePyHTML.startHTML("example", exetension="php", title="title example")
-      
-   * Parameter _`title`_ is for the __HTML__ `<title>` tag, no title by default value
       ```
+   * Parameter _`title`_ is for the __HTML__ `<title>` tag, no title by default value
   ### h1 to h6 tags
   ```python
   from ePyHTML import ePyHTML as ePH
