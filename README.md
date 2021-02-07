@@ -1,4 +1,5 @@
 # ePyHTML
+Version: 0.1
 ## How to Install?
 1. __Clone__ the code
 2. __Move__ the downloaded ___ePyHTML___ folder to your project directory
