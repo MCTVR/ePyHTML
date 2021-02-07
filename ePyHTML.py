@@ -17,7 +17,7 @@ def startHTML(name_of_file, extension="", title=""):
     elif "php" in extension:
         name_of_file = str(name_of_file + ".php")
     else:
-        print("ePyHT only supports html and php extensions!")
+        print("ePyHTML only supports html and php extensions!")
 
     global html
     if path.isfile(name_of_file):
