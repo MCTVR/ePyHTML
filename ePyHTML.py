@@ -1,3 +1,11 @@
+"""
+MADE BY MCTVR
+MIT LICENSE
+GITHUB ONLY
+OPEN SOURCED
+WILL UPDATE FREQUENTLY
+V 0.1
+"""
 import re
 from os import path
 
