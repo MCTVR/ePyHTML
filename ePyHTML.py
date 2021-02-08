@@ -327,6 +327,66 @@ def url(text, classname="", id = "", url = "", center=0):
                 else:
                     return html.write(f"<center><a href='{url}'>{text}</a></center>\n")
 
+def paragraph(text, classname="", id="", center=0):
+    if center == 0:
+        if text == "":
+            return print("Please Enter Text!")
+
+        #if stmt for class, id without href
+        if classname != "" and id != "": #classname y and id y
+            return html.write(f"<p class='{classname}' id='{id}'>{text}</p>\n")
+
+        elif classname != "" and id == "": #classname y
+            return html.write(f"<p class='{classname}'>{text}</p>\n")
+
+        elif id != "" and classname == "": #id y
+            return html.write(f"<p id='{id}>{text}</p>\n")
+    elif center == 1:
+        if text == "":
+            return print("Please Enter Text!")
+
+        # if stmt for class, id without href
+        if classname != "" and id != "":  # classname y and id y
+            return html.write(f"<center><p class='{classname}' id='{id}'>{text}</p></center>\n")
+
+        elif classname != "" and id == "":  # classname y
+            return html.write(f"<center><p class='{classname}'>{text}</p></center>\n")
+
+        elif id != "" and classname == "":  # id y
+            return html.write(f"<center><p id='{id}>{text}</p></center>\n")
+    else:
+        print("Invalid Center Alignment Parameter!")
+
+def img(src, classname="", id="", center=0):
+    if center == 0:
+        if src == "":
+            return print("Please Enter Image Source")
+
+        #if stmt for class, id without href
+        if classname != "" and id != "": #classname y and id y
+            return html.write(f"<img src='{src}' class='{classname}' id='{id}'></img>\n")
+
+        elif classname != "" and id == "": #classname y
+            return html.write(f"<img src='{src}' class='{classname}'></img>\n")
+
+        elif id != "" and classname == "": #id y
+            return html.write(f"<img src='{src}' id='{id}></img>\n")
+    elif center == 1:
+        if src == "":
+            return print("Please Enter Image Source!")
+
+        # if stmt for class, id without href
+        if classname != "" and id != "":  # classname y and id y
+            return html.write(f"<center><img src='{src}' class='{classname}' id='{id}'></img></center>\n")
+
+        elif classname != "" and id == "":  # classname y
+            return html.write(f"<center><img src='{src}' class='{classname}'></img></center>\n")
+
+        elif id != "" and classname == "":  # id y
+            return html.write(f"<center><img src='{src}' id='{id}></img></center>\n")
+    else:
+        print("Invalid Center Alignment Parameter!")
+
 def finHTML():
     html.write("""</body>
 </html>""")
