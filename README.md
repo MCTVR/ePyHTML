@@ -62,6 +62,30 @@ Version: 0.2
     * enter the website into it, press it to redirect to the __URL__ you entered
   * Parameter `center=` is the parameter to make it justified in the center of the page (not necessary)
     * `center=0` is the default value, enter `center=1` to make the tag center-justified 
+
+  ### p tag for paragraphs
+  ```python
+  from ePyHTML import ePyHTML as ePH
+  ePyHTML.startHTML("file name", extension="html", title="html title")
+  ePH.paragraph("Lorem ipsum dolor sit amet", classname="paragraph", id="paragraph", center=1)
+  ```
+  * First parameter is the text for the `p tag`, use `"""` for multiple lines (necessary)
+  * Parameter `classname=""` is the parameter to create a `class` for the specific tag (not necessary)
+  * Parameter `id=""` is the parameter to create an `id` for the specific tag (not necessary)
+  * Parameter `center=` is the parameter to make it justified in the center of the page (not necessary)
+    * `center=0` is the default value, enter `center=1` to make the tag center-justified 
+    
+  ### img tag for images
+  ```python
+  from ePyHTML import ePyHTML as ePH
+  ePyHTML.startHTML("file name", extension="html", title="html title")
+  ePH.img(src="https://avatars.githubusercontent.com/u/69135058", classname="image", id="image", center=1)
+  ```
+  * `src=""` parameter is the *URL* or *local path* of the image for the __HTML__ equivalent `img tag`(necessary)
+  * Parameter `classname=""` is the parameter to create a `class` for the specific tag (not necessary)
+  * Parameter `id=""` is the parameter to create an `id` for the specific tag (not necessary)
+  * Parameter `center=` is the parameter to make it justified in the center of the page (not necessary)
+    * `center=0` is the default value, enter `center=1` to make the tag center-justified 
   
   ### Finish the script by adding `finHTML()`
    ```python
