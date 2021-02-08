@@ -52,6 +52,9 @@ def heading1(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "": #id y
             return html.write(f"<h1 id='{id}>{text}</h1>\n")
+
+        elif id == "" and classname == "": #id n
+            return html.write(f"<h1>{text}</h1>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -65,6 +68,9 @@ def heading1(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><h1 id='{id}>{text}</h1></center>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<center><h1>{text}</h1></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -82,6 +88,9 @@ def heading2(text, classname = "", id = "", center=0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<h2 id='{id}>{text}</h2>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<h2>{text}</h2>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -95,6 +104,9 @@ def heading2(text, classname = "", id = "", center=0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><h2 id='{id}>{text}</h2></center>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<center><h3>{text}</h3></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -112,6 +124,8 @@ def heading3(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<h3 id='{id}>{text}</h3>\n")
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<h3>{text}</h3>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -125,6 +139,9 @@ def heading3(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><h3 id='{id}>{text}</h3></center>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<center><h3>{text}</h3></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -142,6 +159,9 @@ def heading4(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<h4 id='{id}>{text}</h4>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<h4>{text}</h4>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -155,6 +175,9 @@ def heading4(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><h4 id='{id}>{text}</h4></center>\n")
+
+        elif id == "" and classname == "": # id n
+            return html.write(f"<center><h4>{text}</h4></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -172,6 +195,9 @@ def heading5(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<h5 id='{id}>{text}</h5>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<h5>{text}</h5>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -185,6 +211,9 @@ def heading5(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><h5 id='{id}>{text}</h5></center>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<center><h5>{text}</h5></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -202,6 +231,9 @@ def heading6(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<h6 id='{id}>{text}</h6>\n")
+
+        elif id == "" and classname == "":  # id n
+            return html.write(f"<h6>{text}</h6>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -215,6 +247,9 @@ def heading6(text, classname = "", id = "", center = 0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><h6 id='{id}>{text}</h6></center>\n")
+
+        elif id == "" and classname == "":  # id y
+            return html.write(f"<h6>{text}</h6>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -314,7 +349,7 @@ def url(text, classname="", id = "", url = "", center=0):
                 else:
                     return html.write(f"<center><a id='{id}' href='{url}'>{text}</a></center>\n")
 
-        elif classname == "" and id == "" and url != "":  # id y and url y
+        elif classname == "" and id == "" and url != "":  # id n cn n and url y
             url_ok = str(re.search(url_regex, url))
             if url_ok == None:
                 print("\nThis is not a Proper URL, Please Try Again.")
@@ -341,6 +376,9 @@ def paragraph(text, classname="", id="", center=0):
 
         elif id != "" and classname == "": #id y
             return html.write(f"<p id='{id}>{text}</p>\n")
+
+        elif id == "" and classname == "": #id y
+            return html.write(f"<p>{text}</p>\n")
     elif center == 1:
         if text == "":
             return print("Please Enter Text!")
@@ -354,6 +392,9 @@ def paragraph(text, classname="", id="", center=0):
 
         elif id != "" and classname == "":  # id y
             return html.write(f"<center><p id='{id}>{text}</p></center>\n")
+
+        elif id == "" and classname == "":  # id y
+            return html.write(f"<center><p>{text}</p></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
@@ -371,19 +412,25 @@ def img(src, classname="", id="", center=0):
 
         elif id != "" and classname == "": #id y
             return html.write(f"<img src='{src}' id='{id}></img>\n")
+
+        elif id == "" and classname == "": #all no
+            return html.write(f"<img src='{src}'></img>\n")
     elif center == 1:
         if src == "":
             return print("Please Enter Image Source!")
 
         # if stmt for class, id without href
         if classname != "" and id != "":  # classname y and id y
-            return html.write(f"<center><img src='{src}' class='{classname}' id='{id}'></img></center>\n")
+            return html.write(f"<center><img src='{src}' class='{classname}' id='{id}' /></center>\n")
 
         elif classname != "" and id == "":  # classname y
-            return html.write(f"<center><img src='{src}' class='{classname}'></img></center>\n")
+            return html.write(f"<center><img src='{src}' class='{classname}' /></center>\n")
 
         elif id != "" and classname == "":  # id y
-            return html.write(f"<center><img src='{src}' id='{id}></img></center>\n")
+            return html.write(f"<center><img src='{src}' id='{id} /></center>\n")
+
+        elif id == "" and classname == "":  # id y
+            return html.write(f"<center><img src='{src}' /></center>\n")
     else:
         print("Invalid Center Alignment Parameter!")
 
