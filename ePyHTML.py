@@ -4,12 +4,12 @@ MIT LICENSE
 GITHUB ONLY
 OPEN SOURCED
 WILL UPDATE FREQUENTLY
-V 0.2
+V 0.3
 """
 import re
 from os import path
 
-def startHTML(name_of_file, extension="", title=""):
+def startHTML(name_of_file, extension="", title="", css_path=""):
     if extension == "":
         name_of_file = str(name_of_file + ".html")
     elif "html" in extension:
@@ -28,7 +28,33 @@ def startHTML(name_of_file, extension="", title=""):
     else:
         return print("Error While Creating File, Please Try Again!")
 
-    html.write(f"""<!DOCTYPE html>
+    if css_path != "":
+        regex = r'^(.+)\/([^\/]+)$'
+        path_re = re.search(regex, css_path)
+        if "match" in str(path_re):
+            return html.write(f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <link rel='stylesheet' href='{css_path}'>
+</head>
+<body>\n""")
+        else:
+            return html.write(f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+</head>
+<body>\n""")
+
+    elif css_path == "":
+        return html.write(f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
