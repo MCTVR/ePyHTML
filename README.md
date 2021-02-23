@@ -1,5 +1,5 @@
 # ePyHTML
-Version: 0.2
+Version: 0.3
 ## How to Install?
 1. __Clone__ the code
 2. __Move__ the downloaded ___ePyHTML___ folder to your project directory
@@ -17,11 +17,11 @@ Version: 0.2
   Create the html file by coding:
   ```python
   from ePyHTML import ePyHTML
-  ePyHTML.startHTML("file name", extension="html", title="html title")
+  ePyHTML.startHTML("file name", extension="html", title="html title", css_path="./file.css")
   ```
   * The first parameter in `startHTML()` is the file name (necessary)
 
-  * Other parameters are _`extension`_ and _`title`_ (not necessary)
+  * Other parameters are _`extension`_ , _`title`_ and _`css_path`_ (not necessary)
 
   * Parameter _`exetension`_ is for the file extension, no need to use this parameter if you want to create a __HTML__ file.
 
@@ -32,6 +32,7 @@ Version: 0.2
       ePyHTML.startHTML("example", exetension="php", title="title example")
       ```
    * Parameter _`title`_ is for the __HTML__ `<title>` tag, no title by default value
+   * Parameter _`css_path`_ is for the __HTML__ `<link rel="stylesheet" href="./file.css">` tag, no external CSS stylesheet by default
   ### h1 to h6 tags
   ```python
   from ePyHTML import ePyHTML as ePH
